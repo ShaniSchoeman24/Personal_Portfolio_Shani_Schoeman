@@ -25,43 +25,39 @@
     </nav>
   </header>
 
-Ahhh got it Shani 😎 — I’ll give you a full correct working contact form ready for GitHub Pages, using Formspree, with your email and proper HTML structure. No {form_id} placeholders — you’ll just replace it with your actual Formspree endpoint.
+  <main class="contact-new-design">
+    <!-- Background -->
+    <div class="contact-bg"></div>
+    <div class="overlay"></div>
 
-Here’s a polished, fully working version:
+    <!-- Form Wrapper -->
+    <div class="contact-form-wrapper">
 
-<main class="contact-new-design">
-  <!-- Background -->
-  <div class="contact-bg"></div>
-  <div class="overlay"></div>
+      <h1>Contact Me</h1>
+      <p>Have a project in mind or just want to say hi? Send me a message!</p>
 
-  <!-- Form Wrapper -->
-  <div class="contact-form-wrapper">
+      <div class="contact-info-center">
+        <p><strong>Email:</strong> <a href="mailto:shani.schoeman.0324@gmail.com">shani.schoeman.0324@gmail.com</a></p>
+        <p><strong>Phone:</strong> 083 776 0332 / 072 717 1223</p>
+        <p><strong>Location:</strong> Pretoria, Gauteng</p>
+      </div>
 
-    <h1>Contact Me</h1>
-    <p>Have a project in mind or just want to say hi? Send me a message!</p>
+      <!-- Formspree Contact Form -->
+<form action="https://formspree.io/f/{form_id}" method="post">
+        <label for="name">Your Name</label>
+        <input name="name" id="name" type="text" placeholder="Your Name" required>
 
-    <div class="contact-info-center">
-      <p><strong>Email:</strong> <a href="mailto:shani.schoeman.0324@gmail.com">shani.schoeman.0324@gmail.com</a></p>
-      <p><strong>Phone:</strong> 083 776 0332 / 072 717 1223</p>
-      <p><strong>Location:</strong> Pretoria, Gauteng</p>
+        <label for="email">Your Email</label>
+        <input name="email" id="email" type="email" placeholder="Your Email" required>
+
+        <label for="message">Your Message</label>
+        <textarea name="message" id="message" rows="6" placeholder="Your Message" required></textarea>
+
+        <button type="submit" class="btn-submit">Send</button>
+      </form>
+
     </div>
-
-    <!-- Formspree Contact Form -->
-    <form action="https://formspree.io/f/YOUR_REAL_FORM_ID" method="POST">
-      <label for="name">Your Name</label>
-      <input name="name" id="name" type="text" placeholder="Your Name" required>
-
-      <label for="email">Your Email</label>
-      <input name="email" id="email" type="email" placeholder="Your Email" required>
-
-      <label for="message">Your Message</label>
-      <textarea name="message" id="message" rows="6" placeholder="Your Message" required></textarea>
-
-      <button type="submit" class="btn-submit">Send</button>
-    </form>
-
-  </div>
-</main>
+  </main>
 
   <footer class="site-footer">
     <div class="footer-content">
