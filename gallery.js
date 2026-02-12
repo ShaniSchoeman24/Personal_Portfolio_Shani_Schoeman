@@ -28,7 +28,8 @@ let currentCount = 0;
 let currentExt = '';
 
 function showImage(index) {
-  modalImg.src = `Images/${currentGallery}/${index + 1}.${currentExt}`;
+  modalImg.src = `/Personal_Portfolio_Shani_Schoeman/Images/${currentGallery}/${index + 1}.${currentExt}`;
+
 }
 
 document.querySelectorAll('.gallery-btn').forEach(btn => {
