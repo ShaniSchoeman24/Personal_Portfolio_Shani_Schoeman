@@ -1,9 +1,10 @@
 const galleries = {
   'playbook': { count: 20, ext: 'jpg' },
-  'progress': { count: 9, ext: 'png' }, // use lowercase for data-gallery
+  'progress': { count: 9, ext: 'png' },
   'taol': { count: 14, ext: 'jpg' }
 };
 
+// Create single global modal
 const galleryModal = document.createElement('div');
 galleryModal.className = 'gallery-modal';
 galleryModal.innerHTML = `
@@ -32,10 +33,13 @@ function showImage(index) {
 
 document.querySelectorAll('.gallery-btn').forEach(btn => {
   btn.addEventListener('click', () => {
-    currentGallery = btn.dataset.gallery.toLowerCase(); // ensure lowercase
-    const gallery = galleries[currentGallery];
-    currentCount = gallery.count;
-    currentExt = gallery.ext;
+    currentGallery = btn.dataset.gallery.toLowerCase();
+    if (!galleries[currentGallery]) {
+      console.error(`Gallery "${currentGallery}" not found!`);
+      return;
+    }
+    currentCount = galleries[currentGallery].count;
+    currentExt = galleries[currentGallery].ext;
     currentIndex = 0;
     showImage(currentIndex);
     galleryModal.style.display = 'flex';
@@ -43,21 +47,17 @@ document.querySelectorAll('.gallery-btn').forEach(btn => {
 });
 
 closeBtn.addEventListener('click', () => galleryModal.style.display = 'none');
-
 nextBtn.addEventListener('click', () => {
   currentIndex = (currentIndex + 1) % currentCount;
   showImage(currentIndex);
 });
-
 prevBtn.addEventListener('click', () => {
   currentIndex = (currentIndex - 1 + currentCount) % currentCount;
   showImage(currentIndex);
 });
-
 galleryModal.addEventListener('click', e => {
   if (e.target === galleryModal) galleryModal.style.display = 'none';
 });
-
 document.addEventListener('keydown', e => {
   if (galleryModal.style.display === 'flex') {
     if (e.key === 'ArrowRight') nextBtn.click();
