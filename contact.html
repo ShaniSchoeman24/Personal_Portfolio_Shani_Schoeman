@@ -25,31 +25,33 @@
     </nav>
   </header>
 
-  <main class="contact-new-design">
-    <!-- Background -->
-    <div class="contact-bg"></div>
-    <div class="overlay"></div>
+<main class="contact-new-design">
+  <!-- Background -->
+  <div class="contact-bg"></div>
+  <div class="overlay"></div>
 
-    <!-- Form Wrapper -->
-    <div class="contact-form-wrapper">
+  <!-- Form Wrapper -->
+  <div class="contact-form-wrapper">
 
-      <h1>Contact Me</h1>
-      <p>Have a project in mind or just want to say hi? Send me a message!</p>
+    <h1>Contact Me</h1>
+    <p>Have a project in mind or just want to say hi? Send me a message!</p>
 
-      <div class="contact-info-center">
-        <p><strong>Email:</strong> <a href="mailto:shani.schoeman.0324@gmail.com">shani.schoeman.0324@gmail.com</a></p>
-        <p><strong>Phone:</strong> 083 776 0332 / 072 717 1223</p>
-        <p><strong>Location:</strong> Pretoria, Gauteng</p>
-      </div>
-
-      <form id="contactForm" action="#" method="post" novalidate>
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn-submit">Send</button>
-      </form>
+    <div class="contact-info-center">
+      <p><strong>Email:</strong> <a href="mailto:shani.schoeman.0324@gmail.com">shani.schoeman.0324@gmail.com</a></p>
+      <p><strong>Phone:</strong> 083 776 0332 / 072 717 1223</p>
+      <p><strong>Location:</strong> Pretoria, Gauteng</p>
     </div>
-  </main>
+
+    <!-- Formspree Contact Form -->
+    <form id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn-submit">Send</button>
+    </form>
+
+  </div>
+</main>
 
   <footer class="site-footer">
     <div class="footer-content">
